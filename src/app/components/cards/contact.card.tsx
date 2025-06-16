@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React, { ReactElement } from 'react'
-import { BiRightArrow } from 'react-icons/bi'
 import { FaArrowRightLong } from 'react-icons/fa6'
 
 

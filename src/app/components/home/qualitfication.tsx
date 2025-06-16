@@ -1,8 +1,7 @@
 import React from 'react'
 import { BiCalendar } from 'react-icons/bi'
 import { BsSuitcaseLg } from 'react-icons/bs'
-import { GiGraduateCap, GiHandBag } from 'react-icons/gi'
-import { MdCastForEducation, MdOutlineCastForEducation } from 'react-icons/md'
+import { GiGraduateCap } from 'react-icons/gi'
 
 function Qualification() {
     return (

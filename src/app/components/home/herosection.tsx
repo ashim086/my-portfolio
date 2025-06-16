@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { BiDownArrow, BiDownArrowAlt, BiMouse, BiMouseAlt } from 'react-icons/bi'
+import { BiDownArrowAlt, BiMouse } from 'react-icons/bi'
 import { FaInstagram, FaLinkedin, FaSquareFacebook, FaXTwitter } from 'react-icons/fa6'
 import { PiHandWaving } from 'react-icons/pi'
 import { TbBrandTelegram } from 'react-icons/tb'

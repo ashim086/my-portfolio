@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { BiDownload } from 'react-icons/bi'
 import { BsDownload, BsStars } from 'react-icons/bs'
-import { FaComputer, FaNotesMedical } from 'react-icons/fa6'
+import { FaComputer } from 'react-icons/fa6'
 
 function AboutMe() {
     return (

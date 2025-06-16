@@ -1,5 +1,4 @@
 import React from 'react'
-import { BiCheckCircle } from 'react-icons/bi'
 import { MdVerified } from 'react-icons/md'
 
 interface ISkill {
