@@ -1,13 +1,28 @@
+'use client'
+
 import { socialLinks } from '@/app/api/scoaillinks'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
+import toast from 'react-hot-toast'
 import { BiDownArrowAlt, BiMouse } from 'react-icons/bi'
 import { PiHandWaving } from 'react-icons/pi'
 import { TbBrandTelegram } from 'react-icons/tb'
 
 function HeroSection() {
 
+
+    toast.dismiss('dev-mode-toast');
+    toast('Portfolio is still in development. Please switch to Desktop Mode.', {
+        id: 'dev-mode-toast',
+        icon: '⚠️',
+        position: 'bottom-center',
+        style: {
+            background: 'white',
+            color: '#000',
+            fontFamily: 'sans-serif',
+        },
+    });
 
     return (
         <main className=' h-[75vh] flex flex-col mt-24 justify-between'>

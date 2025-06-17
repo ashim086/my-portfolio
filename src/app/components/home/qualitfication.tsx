@@ -48,7 +48,7 @@ function Qualification() {
                 <div className="mb-10 ml-6">
                     <div className="absolute -left-2.5 top-[9.5rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
                     <h3 className="text-lg font-semibold">+2 Science</h3>
-                    <p className="text-gray-500">Sainik Awasiya Mahavidyalaya <br/>Chitwan</p>
+                    <p className="text-gray-500">Sainik Awasiya Mahavidyalaya <br/>Chainpur,Chitwan</p>
                     <div className="flex items-center text-sm text-gray-400 mt-1">
                         <BiCalendar className="w-4 h-4 mr-1" />
                         2019–2021
@@ -58,7 +58,7 @@ function Qualification() {
                 <div className="ml-6">
                     <div className="absolute -left-2.5 top-[17.3rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
                     <h3 className="text-lg font-semibold">BCA</h3>
-                    <p className="text-gray-500">Patan Multiple College</p>
+                    <p className="text-gray-500">Patan Multiple College<br />Patan,Lalitpur</p> 
                     <div className="flex items-center text-sm text-gray-400 mt-1">
                         <BiCalendar className="w-4 h-4 mr-1" />
                         2021–Pursuing
