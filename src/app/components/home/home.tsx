@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import HeroSection from './herosection'
 import AboutMe from './aboutme'
 import Skill from './skill'
@@ -12,15 +12,19 @@ import toast from 'react-hot-toast'
 function Home() {
 
     useEffect(() => {
+        toast.dismiss('dev-mode-toast');
         toast('Portfolio is still in development. Please switch to Desktop Mode.', {
+            id: 'dev-mode-toast',
             icon: '⚠️',
+            position: 'bottom-center',
             style: {
                 background: 'white',
                 color: '#000',
-                fontFamily:"sans-serif"
+                fontFamily: 'sans-serif',
             },
         });
     }, []);
+
     return (
 
         <main>
