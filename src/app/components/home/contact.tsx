@@ -8,7 +8,7 @@ function Contact() {
         <main>
             <Title title='let&apos;s Connect' subtitle='contact me' />
 
-            <div className='grid grid-cols-3 space-x-6 space-y-4 justify-between mt-16 mb-26'>
+            <div className='grid md:grid-cols-3 gap-x-11 space-y-4 md:justify-between mt-16 mb-26 justify-center '>
 
                 {
                     contact.map((item, index) => (
@@ -19,7 +19,7 @@ function Contact() {
             </div>
 
         </main>
-    )
+    )   
 }
 
 export default Contact

@@ -11,8 +11,8 @@ function Home() {
 
     return (
 
-        <main>
-            <section id="home" className="scroll-mt-24"><HeroSection /></section>
+        <main >
+            <section id="home" className="scroll-mt-24  "><HeroSection /></section>
             <section id="about" className="scroll-mt-24"><AboutMe /></section>
             <section id="skills"><Skill /></section>
             <section id="qualification" className="scroll-mt-24"><Qualification /></section>

@@ -10,6 +10,7 @@ interface IProps {
 const ProjectCard: React.FC<IProps> = ({ project }) => {
     return (
         <main className="border border-white shadow-lg shadow-gray-300 rounded-lg transition hover:scale-105 hover:shadow-xl duration-300 pb-4
+        mr-6
         items-center text-center font-sans">
             <Link href={project.link}>
                 <div className="cursor-pointer space-y-3">

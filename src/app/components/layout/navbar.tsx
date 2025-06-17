@@ -1,48 +1,36 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
 
 function Navbar() {
+    const navbarItems = [
+        { label: 'Home', route: '#home' },
+        { label: 'About', route: '#about' },
+        { label: 'Skills', route: '#skills' },
+        { label: 'Qualification', route: '#qualification' },
+        { label: 'Projects', route: '#projects' },
+        { label: 'Contact', route: '#contact' },
+    ];
 
-    const navbaritems = [
-        {
-            label: 'Home',
-            route: "#home",
-        },
-        {
-            label: 'About',
-            route: "#about",
-        },
-        {
-            label: 'Skills',
-            route: "#skills",
-        },
-        {
-            label: 'Qualification',
-            route: "#qualification",
-        },
-        {
-            label: 'Projects',
-            route: "#projects",
-        },
-        {
-            label: 'Contact',
-            route: "#contact",
-        },
-    ]
     return (
-        <main className="sticky top-0 z-50 bg-white flex justify-between mt-6 font-sans py-4">
+        <nav className="sticky top-0 z-50 bg-white font-sans px-4 md:px-8 py-4 rounded-4xl">
+            <div className="flex justify-between items-center">
+                <h1 className="font-bold text-lg pt-3">Portfolio</h1>
 
-            <h1 className="font-medium">Portfolio</h1>
-            <div>
-                {navbaritems.map((item, index) => (
-                    <Link href={item.route} key={index} scroll={true} className="px-4">
-                        {item.label}
-                    </Link>
-                ))}
+                <div className="hidden md:flex space-x-6">
+                    {navbarItems.map((item, index) => (
+                        <Link
+                            href={item.route}
+                            key={index}
+                            scroll={true}
+                            className="text-gray-700 hover:text-black transition-colors"
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                </div>
             </div>
-        </main>
-    
-    )
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;

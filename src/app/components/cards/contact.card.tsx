@@ -19,7 +19,7 @@ interface Iprops {
 
 const ContactCard: React.FC<Iprops> = ({ contact }) => {
     return (
-        <main className='flex flex-col font-sans items-center text-center'>
+        <main className='flex flex-col font-sans items-center text-center col-span-1'>
             <h1 className='text-xl font-semibold'>
                 {contact.name}
             </h1>

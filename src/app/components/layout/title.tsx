@@ -9,7 +9,7 @@ interface IProps {
 const Title: React.FC<IProps> = ({ title, subtitle }) => {
     return (
 
-        <main className='mt-26  font-sans flex flex-col '>
+        <main className='mt-26 lg:mt-26  lg:font-sans lg:flex lg:flex-col '>
 
             <div className=' flex flex-col justify-center items-center-safe space-y-2 mb-16'>
 

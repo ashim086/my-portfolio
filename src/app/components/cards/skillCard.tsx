@@ -13,7 +13,7 @@ interface IProps {
 
 const SkillsCard: React.FC<IProps> = ({ skills, title }) => {
     return (
-        <div className="bg-white p-6 rounded-xl shadow-md border max-w-md mx-auto">
+        <div className="bg-white p-6 rounded-xl shadow-md border max-w-md  w-full">
             <h2 className="text-center text-xl font-semibold mb-6">{title}</h2>
 
             <div className="grid grid-cols-2 gap-x-6 gap-y-4">

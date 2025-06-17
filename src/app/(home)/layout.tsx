@@ -6,7 +6,7 @@ function Layout({ children }: { children: ReactNode }) {
 
         <main className='  min-h-screen'>
 
-            <div className='  flex  mx-44 flex-col h-full'>
+            <div className='lg:mx-44  h-full'>
 
                 <Navbar />
                 {children}
