@@ -17,7 +17,7 @@ function Project() {
 
     return (
 
-        <main >
+        <main className='md:pt-26'>
 
             <Title title='Projects' subtitle='Recent Projects' />
             <div className='grid md:grid-cols-1 lg:grid-cols-2 space-x-9 space-y-9 mx-3 w-full'>
