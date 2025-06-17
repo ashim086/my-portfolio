@@ -1,31 +1,13 @@
+import { socialLinks } from '@/app/api/scoaillinks'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BiDownArrowAlt, BiMouse } from 'react-icons/bi'
-import { FaInstagram, FaLinkedin, FaSquareFacebook, FaXTwitter } from 'react-icons/fa6'
 import { PiHandWaving } from 'react-icons/pi'
 import { TbBrandTelegram } from 'react-icons/tb'
 
 function HeroSection() {
 
-    const socialLinks = [
-        {
-            icon: <FaXTwitter />,
-            link: ''
-        },
-        {
-            icon: <FaInstagram />,
-            link: ''
-        },
-        {
-            icon: <FaSquareFacebook />,
-            link: ''
-        },
-        {
-            icon: <FaLinkedin />,
-            link: ''
-        },
-    ]
 
     return (
         <main className=' h-[75vh] flex flex-col mt-24 justify-between'>
@@ -54,9 +36,11 @@ function HeroSection() {
                         Full-stack MERN developer dedicated to delivering <br />seamless, design-driven solutions
                     </label>
 
-                    <button className=' p-3 bg-black text-white  rounded-lg flex items-center gap-x-4 mt-6 cursor-pointer'>
-                        Say Hello <TbBrandTelegram />
-                    </button>
+                    <Link href={'#contact'} scroll={true}>
+                        <button className=' p-3 bg-black text-white  rounded-lg flex items-center gap-x-4 mt-6 cursor-pointer'>
+                            Say Hello <TbBrandTelegram />
+                        </button>
+                    </Link>
                 </div>
 
 
@@ -87,11 +71,13 @@ function HeroSection() {
 
             </div>
             <div className='align-baseline flex justify-center    content-end'>
-                <p className='flex items-center '>
+                <Link href={'#about'} scroll={true} className=''>
+                    <p className='flex items-center '>
 
-                    <BiMouse size={36} className='text-sm font-light' />
-                    scroll down <BiDownArrowAlt size={26} />
-                </p>
+                        <BiMouse size={36} className='text-sm font-light' />
+                        scroll down <BiDownArrowAlt size={26} />
+                    </p>
+                </Link>
             </div>
         </main>
 

@@ -4,7 +4,7 @@ import Navbar from '../components/layout/navbar'
 function Layout({ children }: { children: ReactNode }) {
     return (
 
-        <main className='  h-screen'>
+        <main className='  min-h-screen'>
 
             <div className='  flex  mx-44 flex-col h-full'>
 

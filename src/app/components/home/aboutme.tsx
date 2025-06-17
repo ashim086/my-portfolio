@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import { BsDownload, BsStars } from 'react-icons/bs'
+import { BsDownload } from 'react-icons/bs'
 import { FaComputer } from 'react-icons/fa6'
+import { GoProjectSymlink } from 'react-icons/go'
 
 function AboutMe() {
     return (
@@ -40,22 +41,22 @@ function AboutMe() {
                         </div>
                         <div className='flex flex-col p-6 border rounded-lg space-y-1 items-center'>
 
-                            <FaComputer size={26} />
+                            <GoProjectSymlink size={26} />
                             <h1>
-                                Experience
+                                Completed
                             </h1>
 
-                            <p>Beginner</p>
+                            <p className='text-gray-400'>3 Projects</p>
                         </div>
-                        <div className='flex flex-col p-6 border rounded-lg space-y-1 items-center'>
+                        {/* <div className='flex flex-col p-6 border rounded-lg space-y-1 items-center'>
 
                             <BsStars size={26}/>
                             <h1>
-                                Experience
+                                Support
                             </h1>
 
-                            <p>Beginner</p>
-                        </div>
+                            <p className='text-gray-400'>Beginner/mid level</p>
+                        </div> */}
                     </div>
 
                     <p className='text-gray-400'>
@@ -64,10 +65,12 @@ function AboutMe() {
 
                     </p>
 
-                    <button className='bg-gray-900 rounded-lg text-white flex p-4 gap-x-3 items-center cursor-pointer '>
-                        Download CV
-                        <BsDownload />
-                    </button>
+                    <a href="/cv.pdf" download>
+                        <button className='bg-gray-900 rounded-lg text-white flex p-4 gap-x-3 items-center cursor-pointer'>
+                            Download CV
+                            <BsDownload />
+                        </button>
+                    </a>
                 </div>
 
 

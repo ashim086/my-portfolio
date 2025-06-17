@@ -1,17 +1,19 @@
 export const backendSkills = [
-    { name: 'HTML', level: 'Basic' },
-    { name: 'JavaScript', level: 'Intermediate' },
-    { name: 'TailwindCSS', level: 'Intermediate' },
-    { name: 'Zustand', level: 'Intermediate' },
-    { name: 'Bootstrap', level: 'Intermediate' },
-    { name: 'React', level: 'Proficient' }
+    { name: 'Node', level: 'Intermediate' },
+    { name: 'Express', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Intermediate' },
+    { name: 'Prisma', level: 'Beginner' },
+    { name: 'Docker', level: 'Beginner' },
+    { name: 'Typescript', level: 'Intermediate' },
+    { name: 'Git/Github', level: 'Proficient' }
 ]
 
 export const FrontSkills = [
-    { name: 'HTML', level: 'Basic' },
+    { name: 'HTML', level: 'Intermediate' },
     { name: 'JavaScript', level: 'Intermediate' },
     { name: 'TailwindCSS', level: 'Intermediate' },
-    { name: 'Zustand', level: 'Intermediate' },
-    { name: 'Bootstrap', level: 'Intermediate' },
-    { name: 'React', level: 'Proficient' }
-]
+    { name: 'React Context', level: 'Intermediate' },
+    { name: 'Typescript', level: 'Intermediate' },
+    { name: 'NextJS', level: 'Intermediate' },
+    { name: 'React', level: 'Proficient' }  
+]   

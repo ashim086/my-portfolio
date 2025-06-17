@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --header-height: 3rem;
   --hue: 0;
