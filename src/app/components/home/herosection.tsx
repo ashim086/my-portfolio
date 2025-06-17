@@ -3,7 +3,7 @@
 import { socialLinks } from '@/app/api/scoaillinks'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect } from 'react'
+import React from 'react'
 import toast from 'react-hot-toast'
 import { BiDownArrowAlt, BiMouse } from 'react-icons/bi'
 import { PiHandWaving } from 'react-icons/pi'
