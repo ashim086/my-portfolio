@@ -35,7 +35,7 @@ export default function RootLayout({
 
         
         <Toaster
-          position="top-center"
+          position="bottom-center"
           reverseOrder={false}
           gutter={8}
           containerClassName=""
