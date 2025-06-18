@@ -36,7 +36,7 @@ const ContactCard: React.FC<Iprops> = ({ contact }) => {
 
                 <div className='flex space-x-1 items-center-safe justify-center pt-2'>
 
-                    <Link href={contact.link} className=' text-gray-500'>{contact.linkDescription}</Link>
+                    <Link href={contact.link} target='blank' rel="noopener" className=' text-gray-500'>{contact.linkDescription}</Link>
                     <FaArrowRightLong />
                 </div>
             </div>

@@ -44,7 +44,7 @@ function HeroSection() {
 
                     <div className='flex gap-x-4'>
                         {socialLinks.map((item, index) => (
-                            <Link key={index} href={item.link}>
+                            <Link key={index} href={item.link} target='_blank'>
                                 {item.icon}
                             </Link>
                         ))}
