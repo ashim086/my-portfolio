@@ -52,7 +52,7 @@ function HeroSection() {
                 </div>
             </div>
 
-            <div className='align-baseline mt-19 flex justify-center    content-end '>
+            <div className='align-baseline mt-19 flex justify-center    content-end mb-6'>
                 <Link href={'#about'} scroll={true} className=''>
                     <p className='flex items-center '>
 
