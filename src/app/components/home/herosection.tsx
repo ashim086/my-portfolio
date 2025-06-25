@@ -9,7 +9,7 @@ import { TbBrandTelegram } from 'react-icons/tb'
 function HeroSection() {
 
     return (
-        <main className='h-[71vh] lg:flex lg:flex-col mt-24 justify-between '>
+        <main className=' lg:flex lg:flex-col mt-24 justify-between '>
             <div className='font-sans flex flex-col-reverse lg:flex-row items-center justify-between p-4 gap-y-10'>
                 <div className='text-center lg:text-left'>
                     <p className='text-5xl font-bold text-gray-700'>
