@@ -3,7 +3,7 @@ export const projectItems = [
         name: 'Medi-care',
         photo: '/medi.png',
         description: 'An ecommerce platform for buying proteins and vitamin',
-        link: 'https://broad-project.vercel.app/'
+        link: 'https://medicarelifeharmony.vercel.app/'
     },
     {
         name: 'Classic-Paper',
