@@ -50,7 +50,7 @@ function AboutMe() {
 
                     <div className='flex justify-center lg:justify-start'>
 
-                        <a href="/cv.pdf" download>
+                        <a href="/Ashim_thapa.pdf" download>
                             <button className='bg-gray-900 rounded-lg text-white flex p-4 gap-x-3 items-center cursor-pointer'>
                                 Download CV
                                 <BsDownload />
