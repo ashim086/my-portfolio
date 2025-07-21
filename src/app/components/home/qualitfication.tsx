@@ -5,7 +5,7 @@ import { GiGraduateCap } from 'react-icons/gi'
 
 function Qualification() {
     return (
-        <main className='mt-26  font-sans flex flex-col h-[80vh] items-center'>
+        <main className='mt-26  font-sans flex flex-col h-[120vh] items-center '>
 
             <div className=' flex flex-col justify-center items-center-safe space-y-2'>
 
@@ -55,13 +55,34 @@ function Qualification() {
                     </div>
                 </div>
 
-                <div className="ml-6">
-                    <div className="absolute -left-2.5 top-[17.3rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
+                <div className="mb-10 ml-6">
+                    <div className="absolute -left-2.5 top-[18.3rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
                     <h3 className="text-lg font-semibold">BCA</h3>
                     <p className="text-gray-500">Patan Multiple College<br />Patan,Lalitpur</p> 
                     <div className="flex items-center text-sm text-gray-400 mt-1">
                         <BiCalendar className="w-4 h-4 mr-1" />
                         2021–Pursuing
+                    </div>
+                </div>
+
+                <div className="mb-10 ml-6">
+                    <div className="absolute -left-2.5 top-[39rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
+                    <h3 className="text-lg font-semibold">MERN stack web developement training</h3>
+                    <p className="text-gray-500">Broadway Infosys private limited<br />Shri Ganesh Marg, Kathmandu </p> 
+                    <div className="flex items-center text-sm text-gray-400 mt-1">
+                        <BiCalendar className="w-4 h-4 mr-1" />
+                      April 2021 – June 2025
+                    </div>
+                </div>
+
+
+                <div className="mb-10 ml-6">
+                    <div className="absolute -left-2.5 top-[28rem] w-4 h-4 bg-gray-500 rounded-full border-2 border-white" />
+                    <h3 className="text-lg font-semibold">Frontend Developer Internship</h3>
+                    <p className="text-gray-500">Panacea solution Pvt. Ltd.<br />Baneshwor, Kathmandu</p> 
+                    <div className="flex items-center text-sm text-gray-400 mt-1">
+                        <BiCalendar className="w-4 h-4 mr-1" />
+                        July 2025–working
                     </div>
                 </div>
 
