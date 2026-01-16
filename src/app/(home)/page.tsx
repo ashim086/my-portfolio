@@ -1,14 +1,14 @@
-import React from 'react'
+import { Suspense } from 'react'
 import Home from '../components/home/home'
 
 async function Page() {
-    // Loading delay for initial page visit - keeps loading.webm visible
-    await new Promise(resolve => setTimeout(resolve, 10000));
-    
+    // Loading delay to make loading.webm visible
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
     return (
-
-        <Home />
-
+        <Suspense fallback={null}>
+            <Home />
+        </Suspense>
     )
 }
 
