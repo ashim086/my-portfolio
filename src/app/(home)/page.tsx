@@ -2,8 +2,8 @@ import React from 'react'
 import Home from '../components/home/home'
 
 async function Page() {
-    // Simulate loading delay - remove this in production
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Loading delay for initial page visit - keeps loading.webm visible
+    await new Promise(resolve => setTimeout(resolve, 10000));
     
     return (
 
