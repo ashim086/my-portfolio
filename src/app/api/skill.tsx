@@ -14,6 +14,7 @@ export const FrontSkills = [
     { name: 'TailwindCSS', level: 'Intermediate' },
     { name: 'React Context', level: 'Intermediate' },
     { name: 'Typescript', level: 'Intermediate' },
-    { name: 'NextJS', level: 'Intermediate' },
-    { name: 'React', level: 'Proficient' }  
+    { name: 'NextJS', level: 'Proficient' },
+    { name: 'React', level: 'Proficient' },
+    { name: 'WebSocket', level: 'Intermediate' }
 ]   
