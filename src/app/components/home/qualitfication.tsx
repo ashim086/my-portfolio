@@ -6,7 +6,7 @@ import { MdModelTraining } from 'react-icons/md'
 
 function Qualification() {
     return (
-        <main className='mt-26  font-sans flex flex-col h-[120vh] items-center '>
+        <main className='mt-26  font-sans flex flex-col items-center '>
 
             <div className=' flex flex-col justify-center items-center-safe space-y-2'>
 
