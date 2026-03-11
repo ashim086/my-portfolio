@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 const SITE_URL = "https://www.ashimmagar.com.np";
-const SITE_NAME = "Ashim Thapa Magar — Full-Stack Web Developer";
+const SITE_NAME = "Ashim Thapa Magar | Ashim Magar — Full-Stack Web Developer Nepal";
 const SITE_DESCRIPTION =
-  "Ashim Thapa Magar is a full-stack MERN developer from Nepal specializing in React, Next.js, Node.js, and MongoDB. Explore projects, skills, and get in touch.";
+  "Ashim Thapa Magar (Ashim Magar / Ashim Thapa) is a full-stack MERN web developer from Nepal. Specializing in React, Next.js, Node.js, TypeScript & MongoDB. Hire Ashim Magar for web development.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -30,17 +30,24 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: [
     "Ashim Thapa Magar",
+    "Ashim Magar",
+    "Ashim Thapa",
     "ashimmagar",
+    "ashim magar portfolio",
+    "ashim thapa magar portfolio",
+    "ashim thapa portfolio",
+    "ashim magar developer",
+    "ashim magar web developer",
     "web developer Nepal",
-    "full-stack developer",
-    "MERN developer",
-    "React developer",
-    "Next.js developer",
-    "Node.js developer",
-    "portfolio",
+    "full-stack developer Nepal",
+    "MERN developer Nepal",
+    "React developer Nepal",
+    "Next.js developer Nepal",
+    "Node.js developer Nepal",
     "frontend developer Nepal",
-    "Ashim Thapa Magar portfolio",
     "Nepal software engineer",
+    "ashimmagar.com.np",
+    "hire web developer Nepal",
   ],
   authors: [{ name: "Ashim Thapa Magar", url: SITE_URL }],
   creator: "Ashim Thapa Magar",
@@ -108,6 +115,7 @@ export default function RootLayout({
         "@type": "Person",
         "@id": `${SITE_URL}/#person`,
         name: "Ashim Thapa Magar",
+        alternateName: ["Ashim Magar", "Ashim Thapa", "ashimmagar"],
         url: SITE_URL,
         image: `${SITE_URL}/ash.jpg`,
         jobTitle: "Full-Stack Web Developer",
@@ -131,10 +139,32 @@ export default function RootLayout({
           "Docker",
           "Prisma",
           "Git",
+          "Full-Stack Web Development",
+          "MERN Stack",
         ],
+        nationality: {
+          "@type": "Country",
+          name: "Nepal",
+        },
         address: {
           "@type": "PostalAddress",
+          addressLocality: "Lalitpur",
+          addressRegion: "Bagmati",
           addressCountry: "NP",
+        },
+        alumniOf: [
+          {
+            "@type": "EducationalOrganization",
+            name: "Patan Multiple College",
+          },
+          {
+            "@type": "EducationalOrganization",
+            name: "Broadway Infosys",
+          },
+        ],
+        worksFor: {
+          "@type": "Organization",
+          name: "IOXET Labs Pvt. Ltd.",
         },
       },
       {

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, Suspense, useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import Navbar from '../components/layout/navbar'
 import Loading from '../loading'
 
@@ -17,19 +17,21 @@ function Layout({ children }: { children: ReactNode }) {
         return () => clearTimeout(timer);
     }, []);
 
-    if (showLoading) {
-        return <Loading />;
-    }
-
     return (
-        <Suspense fallback={<Loading />}>
-            <main className='  min-h-screen'>
-                <div className='lg:mx-44  h-full'>
+        <>
+            {/* Loading overlay — covers content visually but content stays in DOM for SEO crawlers */}
+            {showLoading && (
+                <div className="fixed inset-0 z-[9999]">
+                    <Loading />
+                </div>
+            )}
+            <main className='min-h-screen' style={showLoading ? { overflow: 'hidden', height: '100vh' } : undefined}>
+                <div className='lg:mx-44 h-full'>
                     <Navbar />
                     {children}
                 </div>
             </main>
-        </Suspense>
+        </>
     )
 }
 

@@ -16,10 +16,10 @@ function HeroSection() {
                         Ashim Thapa <br />
                         Magar <PiHandWaving className='inline' aria-hidden='true' />
                     </h1>
-                    <p className='text-xl my-6' role='doc-subtitle'>Full-Stack Web Developer</p>
+                    <p className='text-xl my-6' role='doc-subtitle'>Full-Stack Web Developer from Nepal</p>
                     <p>
-                        Full-stack MERN developer dedicated to delivering <br />
-                        seamless, design-driven solutions
+                        Hi, I&apos;m <strong>Ashim Magar</strong> — a full-stack MERN developer dedicated to <br />
+                        delivering seamless, design-driven web solutions.
                     </p>
 
                     <div className='flex justify-center lg:justify-start '>
