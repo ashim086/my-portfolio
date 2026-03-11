@@ -94,6 +94,14 @@ export const metadata: Metadata = {
     },
   },
   category: "technology",
+  verification: {
+    // Replace these with your actual verification codes from:
+    // Google: https://search.google.com/search-console → Add Property → HTML tag method
+    // Bing: https://www.bing.com/webmasters → Add Site → HTML meta tag method
+    google: "YOUR_GOOGLE_VERIFICATION_CODE",
+    // yandex: "YOUR_YANDEX_CODE",
+    // other: { "msvalidate.01": "YOUR_BING_CODE" },
+  },
 };
 
 export const viewport: Viewport = {
