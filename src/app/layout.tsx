@@ -95,12 +95,8 @@ export const metadata: Metadata = {
   },
   category: "technology",
   verification: {
-    // Replace these with your actual verification codes from:
-    // Google: https://search.google.com/search-console → Add Property → HTML tag method
-    // Bing: https://www.bing.com/webmasters → Add Site → HTML meta tag method
-    google: "YOUR_GOOGLE_VERIFICATION_CODE",
-    // yandex: "YOUR_YANDEX_CODE",
-    // other: { "msvalidate.01": "YOUR_BING_CODE" },
+    google: "vDxZG4jAoqaL6ItML-p1Xj2Y9Vf72Z2JGColGE7xUow",
+    other: { "msvalidate.01": "ADA0E6209815A2A6C8AC3E0370C5E8A5" },
   },
 };
 
