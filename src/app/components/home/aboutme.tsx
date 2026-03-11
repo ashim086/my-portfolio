@@ -6,23 +6,25 @@ import { GoProjectSymlink } from 'react-icons/go'
 
 function AboutMe() {
     return (
-        <main className='mt-26  font-sans flex flex-col min-h-[80vh]'>
+        <article className='mt-26 font-sans flex flex-col min-h-[80vh]' aria-labelledby='about-heading'>
 
-            <div className=' flex flex-col justify-center items-center-safe space-y-2'>
+            <div className='flex flex-col justify-center items-center-safe space-y-2'>
 
-                <h1 className='line-clamp-1 font-semibold text-3xl'>About me</h1>
+                <h2 id='about-heading' className='line-clamp-1 font-semibold text-3xl'>About Me</h2>
 
-                <p className='text-gray-400'>short introduction</p>
+                <p className='text-gray-400'>Short introduction about Ashim Thapa Magar</p>
             </div>
 
             <div className='flex flex-col md:justify-around mt-26 md:flex-row justify-center items-center'>
 
-                <div className='relative h-64 w-64 '>
+                <div className='relative h-64 w-64'>
                     <Image
                         src='/ash.jpg'
-                        alt='ash.jpg'
+                        alt='Ashim Thapa Magar profile photo'
                         fill
-                        className='object-cover rounded-full' />
+                        className='object-cover rounded-full'
+                        sizes='256px'
+                    />
                 </div>
 
                 <div className='space-y-7'>
@@ -30,30 +32,28 @@ function AboutMe() {
                     <div className="space-y-7 max-w-xl text-center md:text-left m-6">
                         <div className="flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
                             <div className="flex flex-col p-6 border rounded-lg space-y-1 items-center">
-                                <FaComputer size={26} />
-                                <h1>Experience</h1>
+                                <FaComputer size={26} aria-hidden='true' />
+                                <h3>Experience</h3>
                                 <p className="text-gray-400">Beginner</p>
                             </div>
                             <div className="flex flex-col p-6 border rounded-lg space-y-1 items-center">
-                                <GoProjectSymlink size={26} />
-                                <h1>Completed</h1>
+                                <GoProjectSymlink size={26} aria-hidden='true' />
+                                <h3>Completed</h3>
                                 <p className="text-gray-400">3 Projects</p>
                             </div>
                         </div>
                     </div>
 
                     <p className='text-gray-400 text-center md:text-start'>
-
                         Full-stack MERN developer crafting applications with a focus<br /> on minimal design and user-friendly interfaces.
-
                     </p>
 
                     <div className='flex justify-center lg:justify-start'>
 
-                        <a href="/Ashim_thapa.pdf" download>
+                        <a href="/Ashim_thapa.pdf" download aria-label='Download Ashim Thapa Magar resume PDF'>
                             <button className='bg-gray-900 rounded-lg text-white flex p-4 gap-x-3 items-center cursor-pointer'>
                                 Download CV
-                                <BsDownload />
+                                <BsDownload aria-hidden='true' />
                             </button>
                         </a>
                     </div>
@@ -61,7 +61,7 @@ function AboutMe() {
 
 
             </div>
-        </main >
+        </article>
     )
 }
 

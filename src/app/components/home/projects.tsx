@@ -13,13 +13,9 @@ export interface IProject {
 
 
 function Project() {
-
-
     return (
-
-        <main className='md:pt-26 lg:pt-0'>
-
-            <Title title='Projects' subtitle='Recent Projects' />
+        <div className='md:pt-26 lg:pt-0'>
+            <Title title='Projects' subtitle='Recent web development projects by Ashim Thapa Magar' />
             <div className='grid md:grid-cols-1 lg:grid-cols-2 space-x-9 space-y-9 mx-3 w-full'>
 
 
@@ -29,8 +25,7 @@ function Project() {
                     ))
                 }
             </div>
-
-        </main>
+        </div>
     )
 }
 

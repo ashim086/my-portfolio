@@ -5,20 +5,17 @@ import ContactCard from '../cards/contact.card'
 
 function Contact() {
     return (
-        <main>
-            <Title title='let&apos;s Connect' subtitle='contact me' />
+        <div>
+            <Title title="Let's Connect" subtitle='Get in touch with Ashim Thapa Magar' />
 
-            <div className='grid md:grid-cols-3 gap-8 mt-16 mb-26 justify-center'>
-
+            <address className='grid md:grid-cols-3 gap-8 mt-16 mb-26 justify-center not-italic'>
                 {
                     contact.map((item, index) => (
                         <ContactCard contact={item} key={index} />
                     ))
                 }
-
-            </div>
-
-        </main>
+            </address>
+        </div>
     )   
 }
 

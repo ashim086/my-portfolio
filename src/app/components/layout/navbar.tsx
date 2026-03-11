@@ -12,16 +12,19 @@ function Navbar() {
     ];
 
     return (
-        <nav className="sticky top-0 z-50 bg-white font-sans px-4  py-4 rounded-4xl">
+        <nav className="sticky top-0 z-50 bg-white font-sans px-4 py-4 rounded-4xl" aria-label="Main navigation">
             <div className="flex justify-between items-center">
-                <h1 className="font-bold text-lg pt-3">Portfolio</h1>
+                <Link href="/" className="font-bold text-lg pt-3" aria-label="Ashim Thapa Magar - Home">
+                    Ashim Magar
+                </Link>
 
-                <div className="hidden md:flex space-x-6">
+                <div className="hidden md:flex space-x-6" role="menubar">
                     {navbarItems.map((item, index) => (
                         <Link
                             href={item.route}
                             key={index}
                             scroll={true}
+                            role="menuitem"
                             className="text-gray-700 hover:text-black transition-colors"
                         >
                             {item.label}
