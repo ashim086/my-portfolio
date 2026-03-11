@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 const SITE_URL = "https://www.ashimmagar.com.np";
-const SITE_NAME = "Ashim Thapa Magar | Ashim Magar — Full-Stack Web Developer Nepal";
+const SITE_NAME = "Ashim Magar — Full-Stack Web Developer";
 const SITE_DESCRIPTION =
-  "Ashim Thapa Magar (Ashim Magar / Ashim Thapa) is a full-stack MERN web developer from Nepal. Specializing in React, Next.js, Node.js, TypeScript & MongoDB. Hire Ashim Magar for web development.";
+  "Ashim Thapa Magar (Ashim Magar) — Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB expert.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -64,22 +64,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "Ashim Thapa Magar",
-    title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    images: [
-      {
-        url: "/ash.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Ashim Thapa Magar — Full-Stack Web Developer",
-      },
-    ],
+    title: "Ashim Thapa Magar — Web Developer Portfolio",
+    description: "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    images: ["/ash.jpg"],
+    title: "Ashim Thapa Magar — Web Developer Portfolio",
+    description: "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
     creator: "@ashimmagar94524",
   },
   robots: {
@@ -198,7 +189,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href={SITE_URL} />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}

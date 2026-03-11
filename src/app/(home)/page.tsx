@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Home from '../components/home/home'
 
 export const metadata: Metadata = {
-    title: "Ashim Thapa Magar | Ashim Magar — Full-Stack Web Developer Portfolio",
+    title: "Ashim Magar — Full-Stack Web Developer Portfolio",
     description:
-        "Portfolio of Ashim Thapa Magar (Ashim Magar / Ashim Thapa) — a full-stack MERN web developer from Nepal skilled in React, Next.js, Node.js, MongoDB & TypeScript. View projects and contact Ashim Magar.",
+        "Ashim Thapa Magar (Ashim Magar) — full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB. View projects and get in touch.",
     alternates: {
         canonical: "https://www.ashimmagar.com.np",
     },
