@@ -16,7 +16,7 @@ function Contact() {
                 }
             </address>
         </div>
-    )   
+    )
 }
 
 export default Contact
