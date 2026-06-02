@@ -4,6 +4,7 @@ import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "./components/layout/theme-provider";
+import PostHogProvider from "./components/layout/posthog-provider";
 
 const plexSans = IBM_Plex_Sans({
   variable: "--font-plex-sans",
@@ -214,7 +215,9 @@ export default function RootLayout({
       <body
         className={`${plexSans.variable} ${plexMono.variable} antialiased w-full`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </PostHogProvider>
         <SpeedInsights />
         <Toaster
           position="bottom-center"

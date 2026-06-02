@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { track } from "@/lib/analytics";
 
 export type AppId =
   | "about"
@@ -131,6 +132,8 @@ export function WindowManagerProvider({
 
   const open = useCallback(
     (appId: AppId, opts?: OpenOptions) => {
+      // Engagement signal — which apps visitors actually open.
+      track("app_opened", { app: appId });
       // Use a ref-backed snapshot to avoid race where multiple opens
       // happen simultaneously and create duplicate singleton windows.
       const def = apps[appId];
