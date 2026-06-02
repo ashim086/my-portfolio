@@ -1,23 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "./components/layout/theme-provider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 const SITE_URL = "https://www.ashimmagar.com.np";
-const SITE_NAME = "Ashim Magar — Full-Stack Web Developer";
+const SITE_NAME = "Ashim Thapa Magar — Full-Stack Web Developer";
 const SITE_DESCRIPTION =
   "Ashim Thapa Magar (Ashim Magar) — Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB expert.";
 
@@ -65,12 +68,14 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Ashim Thapa Magar",
     title: "Ashim Thapa Magar — Web Developer Portfolio",
-    description: "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
+    description:
+      "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Ashim Thapa Magar — Web Developer Portfolio",
-    description: "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
+    description:
+      "Full-stack MERN developer from Nepal. React, Next.js, Node.js & MongoDB.",
     creator: "@ashimmagar94524",
   },
   robots: {
@@ -92,11 +97,26 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#EEEFE9" },
+    { media: "(prefers-color-scheme: dark)", color: "#151515" },
+  ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 };
+
+const themeInitScript = `
+(function() {
+  try {
+    var t = localStorage.getItem('theme') || 'system';
+    var d = t === 'system'
+      ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      : t;
+    document.documentElement.setAttribute('data-theme', d);
+  } catch (e) {}
+})();
+`.trim();
 
 export default function RootLayout({
   children,
@@ -143,14 +163,14 @@ export default function RootLayout({
         },
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Lalitpur",
+          addressLocality: "Baneshwor",
           addressRegion: "Bagmati",
           addressCountry: "NP",
         },
         alumniOf: [
           {
             "@type": "EducationalOrganization",
-            name: "Patan Multiple College",
+            name: "Patan Multiple Campus",
           },
           {
             "@type": "EducationalOrganization",
@@ -159,7 +179,7 @@ export default function RootLayout({
         ],
         worksFor: {
           "@type": "Organization",
-          name: "IOXET Labs Pvt. Ltd.",
+          name: "ICodify Technology",
         },
       },
       {
@@ -183,17 +203,18 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full`}
+        className={`${plexSans.variable} ${plexMono.variable} antialiased w-full`}
       >
-        {children}
+        <ThemeProvider>{children}</ThemeProvider>
         <SpeedInsights />
         <Toaster
           position="bottom-center"
@@ -203,14 +224,14 @@ export default function RootLayout({
             duration: 5000,
             removeDelay: 1000,
             style: {
-              background: '#363636',
-              color: '#fff',
+              background: "var(--ink)",
+              color: "var(--canvas)",
             },
             success: {
               duration: 3000,
               iconTheme: {
-                primary: 'green',
-                secondary: 'black',
+                primary: "var(--primary)",
+                secondary: "var(--on-primary)",
               },
             },
           }}

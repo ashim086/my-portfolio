@@ -8,8 +8,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Ashim Thapa Magar is a full-stack MERN developer from Nepal specializing in React, Next.js, Node.js, and MongoDB.",
     start_url: "/",
     display: "standalone",
-    background_color: "#ffffff",
-    theme_color: "#ffffff",
+    background_color: "#EEEFE9",
+    theme_color: "#EEEFE9",
     icons: [
       {
         src: "/ash.jpg",

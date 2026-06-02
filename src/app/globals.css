@@ -1,15 +1,205 @@
 @import "tailwindcss";
 
+/* ----------------------------------------------------------------------------
+ * Theme tokens — PostHog-inspired.
+ * Values are the single source of truth; @theme below maps them to Tailwind
+ * utilities (bg-canvas, text-ink, border-border, etc.) and the no-flash inline
+ * script in layout.tsx flips between :root and [data-theme="dark"].
+ * -------------------------------------------------------------------------- */
 
+:root {
+  --canvas: #eeefe9;
+  --surface: #ffffff;
+  --surface-alt: #f5f5ef;
+  --ink: #23251d;
+  --body: #4d4f46;
+  --charcoal: #33342d;
+  --mute: #6c6e63;
+  --ash: #9b9c92;
+  --stone: #b6b7af;
+  --border: #d0d1c9;
+  --border-strong: #b6b7af;
+  --primary: #f7a501;
+  --primary-pressed: #dd9001;
+  --primary-active: #b17816;
+  --on-primary: #23251d;
+  --accent: #f54e00;
+  --success: #1f8a4c;
+  --shadow-card: 0 1px 0 rgba(35, 37, 29, 0.04);
+  --shadow-card-hover: 0 1px 0 rgba(35, 37, 29, 0.12);
+}
+
+[data-theme="dark"] {
+  --canvas: #151515;
+  --surface: #1f1f1c;
+  --surface-alt: #23251d;
+  --ink: #eeefe9;
+  --body: #c9cabe;
+  --charcoal: #e0e1d6;
+  --mute: #9b9c92;
+  --ash: #6c6e63;
+  --stone: #4b4b4b;
+  --border: #2c2c2c;
+  --border-strong: #4b4b4b;
+  --primary: #f1a82c;
+  --primary-pressed: #dc9300;
+  --primary-active: #b17816;
+  --on-primary: #151515;
+  --accent: #f54e00;
+  --success: #3ddc84;
+  --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* ----------------------------------------------------------------------------
+ * Map tokens to Tailwind v4 @theme so utility classes work everywhere.
+ * -------------------------------------------------------------------------- */
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-charcoal: var(--charcoal);
+  --color-mute: var(--mute);
+  --color-ash: var(--ash);
+  --color-stone: var(--stone);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-primary: var(--primary);
+  --color-primary-pressed: var(--primary-pressed);
+  --color-primary-active: var(--primary-active);
+  --color-on-primary: var(--on-primary);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+
+  --font-sans: var(--font-plex-sans), system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius-md: 6px;
+  --radius-pill: 9999px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Base layer
+ * -------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #FFFFFF;
-  color: var(--foreground);
-  font-family:'Poppins';
-
+  background-color: var(--canvas);
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "ss02", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
+::selection {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Soft theme transition for surfaces that don't otherwise declare one. */
+.bg-surface,
+.bg-surface-alt,
+.bg-canvas,
+.border-border {
+  transition: background-color 180ms ease, border-color 180ms ease,
+    color 180ms ease;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
+
+/* Reusable keyframes */
+@keyframes spin-in {
+  from {
+    transform: rotate(-90deg) scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes window-open {
+  from {
+    transform: scale(0.92) translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes window-close {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes pop-in {
+  0%   { transform: scale(0.8); opacity: 0; }
+  60%  { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(12px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+@keyframes boot-dot-pulse {
+  0%, 80%, 100% { opacity: 0.15; transform: scale(0.7); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes loading-bar {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes genie-minimize {
+  from {
+    transform: var(--genie-from, scale(1)) translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: var(--genie-to, scale(0.05)) translate(var(--genie-dx, 0), var(--genie-dy, 360px));
+    opacity: 0;
+  }
+}
