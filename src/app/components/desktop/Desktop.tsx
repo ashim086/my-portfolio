@@ -338,7 +338,7 @@ function DesktopInner() {
 
   return (
     <div
-      className="relative isolate h-screen w-screen overflow-hidden bg-canvas"
+      className="fixed inset-0 isolate overflow-hidden bg-canvas"
       onContextMenu={handleDesktopContextMenu}
     >
       {/* Wallpaper layer */}

@@ -88,6 +88,38 @@ html {
   scroll-behavior: smooth;
 }
 
+/* The app is a fullscreen desktop — never scroll the page itself. */
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slim, theme-matched scrollbars (kills the chunky native arrow scrollbar). */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mute);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 body {
   background-color: var(--canvas);
   color: var(--body);
